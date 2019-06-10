@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A167B4122AE2F6200FC062D /* CinemaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A167B4022AE2F6200FC062D /* CinemaViewController.m */; };
+		5A167B4422AE2F7F00FC062D /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A167B4322AE2F7F00FC062D /* MyViewController.m */; };
 		5A68283A22A8AB0D00CC3D6F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A68283922A8AB0D00CC3D6F /* AppDelegate.m */; };
 		5A68283D22A8AB0D00CC3D6F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A68283C22A8AB0D00CC3D6F /* ViewController.m */; };
 		5A68284022A8AB0D00CC3D6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A68283E22A8AB0D00CC3D6F /* Main.storyboard */; };
@@ -19,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A167B3F22AE2F6200FC062D /* CinemaViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CinemaViewController.h; sourceTree = "<group>"; };
+		5A167B4022AE2F6200FC062D /* CinemaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CinemaViewController.m; sourceTree = "<group>"; };
+		5A167B4222AE2F7F00FC062D /* MyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
+		5A167B4322AE2F7F00FC062D /* MyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
 		5A68283522A8AB0D00CC3D6F /* 唯独影院.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "唯独影院.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A68283822A8AB0D00CC3D6F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5A68283922A8AB0D00CC3D6F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -143,6 +149,8 @@
 		5A68285422AC912600CC3D6F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5A167B3F22AE2F6200FC062D /* CinemaViewController.h */,
+				5A167B4022AE2F6200FC062D /* CinemaViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -164,6 +172,8 @@
 		5A68285722AC912E00CC3D6F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5A167B4222AE2F7F00FC062D /* MyViewController.h */,
+				5A167B4322AE2F7F00FC062D /* MyViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -254,6 +264,8 @@
 			files = (
 				5A68283D22A8AB0D00CC3D6F /* ViewController.m in Sources */,
 				5A68284822A8AB0F00CC3D6F /* main.m in Sources */,
+				5A167B4422AE2F7F00FC062D /* MyViewController.m in Sources */,
+				5A167B4122AE2F6200FC062D /* CinemaViewController.m in Sources */,
 				5A68283A22A8AB0D00CC3D6F /* AppDelegate.m in Sources */,
 				5A68285F22AC9CF100CC3D6F /* MovieTableViewCell.m in Sources */,
 				5A68286222ACDE4200CC3D6F /* MovieModel.m in Sources */,

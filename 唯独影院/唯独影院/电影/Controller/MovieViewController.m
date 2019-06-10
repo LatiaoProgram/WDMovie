@@ -21,6 +21,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.navigationController.navigationBar.hidden = YES;
+    
     self.backgroundimg=[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 430)];
     self.backgroundimg.image=[UIImage imageNamed:@"xhdpi∏±±æ 2"];
     
