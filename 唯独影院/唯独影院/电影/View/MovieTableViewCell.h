@@ -11,7 +11,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MovieTableViewCell : UITableViewCell
-@property(nonatomic,strong)UILabel *label;
+
+@property(nonatomic,strong)UIImageView *image;
+@property(nonatomic,strong)UIImageView *img;
+@property(nonatomic,strong)UILabel *namelabel;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MovieModel : NSObject
 
+@property(nonatomic,strong)NSString *imageUrl;
+@property(nonatomic,strong)NSString *name;
+
 @end
 
 NS_ASSUME_NONNULL_END

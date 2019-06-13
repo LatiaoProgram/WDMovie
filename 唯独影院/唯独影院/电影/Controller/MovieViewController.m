@@ -9,12 +9,21 @@
 #import "MovieViewController.h"
 #import "MovieTableViewCell.h"
 #import "LQScrollView.h"
+#import "AFNetworking.h"
+#import "MJExtension.h"
+#import "MJRefresh.h"
+#import "UIImageView+WebCache.h"
+#import "MovieModel.h"
+
 
 @interface MovieViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UIImageView *backgroundimg;
 @property(nonatomic,strong)UITableView * tableV;
 @property(nonatomic,strong)UIButton * DWImgBtn;
 @property(nonatomic,strong)UIButton * DWBtn;
+@property(nonatomic,strong)UIScrollView *scrollV;
+@property(nonatomic,strong)NSMutableArray * arr;
+
 @end
 
 @implementation MovieViewController
@@ -38,9 +47,14 @@
     [_DWBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     _DWBtn.titleLabel.textAlignment=NSTextAlignmentCenter;
     
-    NSMutableArray * arr = [NSMutableArray arrayWithObjects:@"scroll1",@"scroll2",@"scroll3",@"scroll4",@"scroll5", nil];
-    LQScrollView * lq = [[LQScrollView alloc]initWithFrame:CGRectMake(0, 20, self.view.frame.size.width, 400) imageArray:arr];
+    _arr= [[NSMutableArray alloc]init];
+    
+    LQScrollView * lq = [[LQScrollView alloc]initWithFrame:CGRectMake(0, 20, self.view.frame.size.width, 400) imageArray:self.arr];
 //    lq.backgroundColor=[UIColor redColor];
+    
+    [self scrollVimg];
+    
+    
     
     
     
@@ -51,6 +65,32 @@
     [self.tableV addSubview:self.DWBtn];
     
     [self.tableV addSubview:lq];
+}
+
+
+-(void)scrollVimg{
+    
+    AFHTTPSessionManager *manager=[AFHTTPSessionManager manager];
+    [manager GET:@"http://172.17.8.100/movieApi/movie/v1/findHotMovieList?userId=18&sessionId=15320748258726&page=1&count=10" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        NSArray * arr = responseObject[@"result"];
+        
+        for (NSDictionary * dic in arr) {
+            
+            MovieModel *mmodel=[[MovieModel alloc]init];
+            [mmodel mj_setKeyValues:dic];
+            [self.arr addObject:mmodel];
+            
+        }
+        
+        NSLog(@"_________________%@",self.arr);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        NSLog(@"电影界面滚动视图获取网络图片错误：%@",error);
+        
+    }];
+    
 }
 
 -(UITableView *)tableV{
@@ -107,6 +147,13 @@
         [cell addSubview:rightimg];
         
     }else if(indexPath.row == 2){
+        _scrollV = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width * 2, 190)];
+        _scrollV.backgroundColor=[UIColor redColor];
+        _scrollV.scrollEnabled=YES;
+        _scrollV.contentOffset=CGPointMake(100, 160);
+        _scrollV.bounces=NO;
+                
+        [cell addSubview:self.scrollV];
         
     }else if(indexPath.row == 3){
         
@@ -159,22 +206,22 @@
         return 400;
     }else if(indexPath.row == 1){
         
-        return 60;
+        return 50;
     }else if(indexPath.row == 2){
         
-        return 180;
+        return 190;
     }else if(indexPath.row == 3){
         
-        return 60;
+        return 50;
     }else if(indexPath.row == 4){
         
-        return 180;
+        return 190;
     }else if(indexPath.row == 5){
         
-        return 60;
+        return 50;
     }else {
         
-        return 180;
+        return 190;
     }
     
     

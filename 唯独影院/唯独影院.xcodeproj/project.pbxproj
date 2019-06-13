@@ -19,9 +19,11 @@
 		5A68285C22AC9AB500CC3D6F /* MovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A68285B22AC9AB500CC3D6F /* MovieViewController.m */; };
 		5A68285F22AC9CF100CC3D6F /* MovieTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A68285E22AC9CF100CC3D6F /* MovieTableViewCell.m */; };
 		5A68286222ACDE4200CC3D6F /* MovieModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A68286122ACDE4200CC3D6F /* MovieModel.m */; };
+		63F307B79803FFD051E261E3 /* libPods-唯独影院.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3652ED37F845449FBD78621A /* libPods-唯独影院.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3652ED37F845449FBD78621A /* libPods-唯独影院.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-唯独影院.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A167B3F22AE2F6200FC062D /* CinemaViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CinemaViewController.h; sourceTree = "<group>"; };
 		5A167B4022AE2F6200FC062D /* CinemaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CinemaViewController.m; sourceTree = "<group>"; };
 		5A167B4222AE2F7F00FC062D /* MyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
@@ -44,6 +46,8 @@
 		5A68285E22AC9CF100CC3D6F /* MovieTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieTableViewCell.m; sourceTree = "<group>"; };
 		5A68286022ACDE4200CC3D6F /* MovieModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieModel.h; sourceTree = "<group>"; };
 		5A68286122ACDE4200CC3D6F /* MovieModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieModel.m; sourceTree = "<group>"; };
+		9E267295BF769BFA7BCF79CF /* Pods-唯独影院.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-唯独影院.debug.xcconfig"; path = "Pods/Target Support Files/Pods-唯独影院/Pods-唯独影院.debug.xcconfig"; sourceTree = "<group>"; };
+		F5747749059D9D3B9E8B3C32 /* Pods-唯独影院.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-唯独影院.release.xcconfig"; path = "Pods/Target Support Files/Pods-唯独影院/Pods-唯独影院.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,17 +55,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63F307B79803FFD051E261E3 /* libPods-唯独影院.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		31EF0CBA8311BACCD193C1E7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9E267295BF769BFA7BCF79CF /* Pods-唯独影院.debug.xcconfig */,
+				F5747749059D9D3B9E8B3C32 /* Pods-唯独影院.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5A68282C22A8AB0D00CC3D6F = {
 			isa = PBXGroup;
 			children = (
 				5A68283722A8AB0D00CC3D6F /* 唯独影院 */,
 				5A68283622A8AB0D00CC3D6F /* Products */,
+				31EF0CBA8311BACCD193C1E7 /* Pods */,
+				BD387F79A5DA971A6F8C70E7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -197,6 +213,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		BD387F79A5DA971A6F8C70E7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3652ED37F845449FBD78621A /* libPods-唯独影院.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -204,9 +228,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A68284B22A8AB0F00CC3D6F /* Build configuration list for PBXNativeTarget "唯独影院" */;
 			buildPhases = (
+				F35F0F316F47E82F692E77EE /* [CP] Check Pods Manifest.lock */,
 				5A68283122A8AB0D00CC3D6F /* Sources */,
 				5A68283222A8AB0D00CC3D6F /* Frameworks */,
 				5A68283322A8AB0D00CC3D6F /* Resources */,
+				29BD0741AF519EAECC9C1C9C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -261,6 +287,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		29BD0741AF519EAECC9C1C9C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-唯独影院/Pods-唯独影院-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-唯独影院/Pods-唯独影院-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F35F0F316F47E82F692E77EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-唯独影院-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5A68283122A8AB0D00CC3D6F /* Sources */ = {
@@ -415,6 +490,7 @@
 		};
 		5A68284C22A8AB0F00CC3D6F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E267295BF769BFA7BCF79CF /* Pods-唯独影院.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -431,6 +507,7 @@
 		};
 		5A68284D22A8AB0F00CC3D6F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5747749059D9D3B9E8B3C32 /* Pods-唯独影院.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

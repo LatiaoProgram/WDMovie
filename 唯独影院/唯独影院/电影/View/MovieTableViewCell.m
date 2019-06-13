@@ -10,6 +10,27 @@
 
 @implementation MovieTableViewCell
 
+-(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+    
+    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+        
+        [self addSubview:self.image];
+        [self addSubview:self.img];
+        [self addSubview:self.namelabel];
+    }
+    
+    return self;
+}
+
+//-(UIImageView *)image{
+//
+//    if (!_image) {
+//        _image=[UIImageView alloc]initWithFrame:CGRectMake(<#CGFloat x#>, <#CGFloat y#>, <#CGFloat width#>, <#CGFloat height#>)
+//    }
+//}
+
+
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
