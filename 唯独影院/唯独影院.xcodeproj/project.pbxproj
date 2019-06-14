@@ -17,8 +17,9 @@
 		5A68284522A8AB0F00CC3D6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A68284322A8AB0F00CC3D6F /* LaunchScreen.storyboard */; };
 		5A68284822A8AB0F00CC3D6F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A68284722A8AB0F00CC3D6F /* main.m */; };
 		5A68285C22AC9AB500CC3D6F /* MovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A68285B22AC9AB500CC3D6F /* MovieViewController.m */; };
-		5A68285F22AC9CF100CC3D6F /* MovieTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A68285E22AC9CF100CC3D6F /* MovieTableViewCell.m */; };
 		5A68286222ACDE4200CC3D6F /* MovieModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A68286122ACDE4200CC3D6F /* MovieModel.m */; };
+		5AFD126E22B3508E0056354B /* ReleaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFD126D22B3508E0056354B /* ReleaseModel.m */; };
+		5AFD127122B350AD0056354B /* ComingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFD127022B350AD0056354B /* ComingModel.m */; };
 		63F307B79803FFD051E261E3 /* libPods-唯独影院.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3652ED37F845449FBD78621A /* libPods-唯独影院.a */; };
 /* End PBXBuildFile section */
 
@@ -42,10 +43,12 @@
 		5A68284722A8AB0F00CC3D6F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5A68285A22AC9AB500CC3D6F /* MovieViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieViewController.h; sourceTree = "<group>"; };
 		5A68285B22AC9AB500CC3D6F /* MovieViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieViewController.m; sourceTree = "<group>"; };
-		5A68285D22AC9CF100CC3D6F /* MovieTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieTableViewCell.h; sourceTree = "<group>"; };
-		5A68285E22AC9CF100CC3D6F /* MovieTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieTableViewCell.m; sourceTree = "<group>"; };
 		5A68286022ACDE4200CC3D6F /* MovieModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieModel.h; sourceTree = "<group>"; };
 		5A68286122ACDE4200CC3D6F /* MovieModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieModel.m; sourceTree = "<group>"; };
+		5AFD126C22B3508E0056354B /* ReleaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReleaseModel.h; sourceTree = "<group>"; };
+		5AFD126D22B3508E0056354B /* ReleaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReleaseModel.m; sourceTree = "<group>"; };
+		5AFD126F22B350AD0056354B /* ComingModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComingModel.h; sourceTree = "<group>"; };
+		5AFD127022B350AD0056354B /* ComingModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComingModel.m; sourceTree = "<group>"; };
 		9E267295BF769BFA7BCF79CF /* Pods-唯独影院.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-唯独影院.debug.xcconfig"; path = "Pods/Target Support Files/Pods-唯独影院/Pods-唯独影院.debug.xcconfig"; sourceTree = "<group>"; };
 		F5747749059D9D3B9E8B3C32 /* Pods-唯独影院.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-唯独影院.release.xcconfig"; path = "Pods/Target Support Files/Pods-唯独影院/Pods-唯独影院.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,8 +153,6 @@
 		5A68285222A8AB3D00CC3D6F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5A68285D22AC9CF100CC3D6F /* MovieTableViewCell.h */,
-				5A68285E22AC9CF100CC3D6F /* MovieTableViewCell.m */,
 				5A3941A322AF80290049BD5E /* LQScrollView.h */,
 				5A3941A422AF80290049BD5E /* LQScrollView.m */,
 			);
@@ -163,6 +164,10 @@
 			children = (
 				5A68286022ACDE4200CC3D6F /* MovieModel.h */,
 				5A68286122ACDE4200CC3D6F /* MovieModel.m */,
+				5AFD126C22B3508E0056354B /* ReleaseModel.h */,
+				5AFD126D22B3508E0056354B /* ReleaseModel.m */,
+				5AFD126F22B350AD0056354B /* ComingModel.h */,
+				5AFD127022B350AD0056354B /* ComingModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -346,9 +351,10 @@
 				5A68284822A8AB0F00CC3D6F /* main.m in Sources */,
 				5A167B4422AE2F7F00FC062D /* MyViewController.m in Sources */,
 				5A167B4122AE2F6200FC062D /* CinemaViewController.m in Sources */,
+				5AFD127122B350AD0056354B /* ComingModel.m in Sources */,
 				5A68283A22A8AB0D00CC3D6F /* AppDelegate.m in Sources */,
-				5A68285F22AC9CF100CC3D6F /* MovieTableViewCell.m in Sources */,
 				5A68286222ACDE4200CC3D6F /* MovieModel.m in Sources */,
+				5AFD126E22B3508E0056354B /* ReleaseModel.m in Sources */,
 				5A3941A522AF80290049BD5E /* LQScrollView.m in Sources */,
 				5A68285C22AC9AB500CC3D6F /* MovieViewController.m in Sources */,
 			);

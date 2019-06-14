@@ -7,7 +7,6 @@
 //
 
 #import "MovieViewController.h"
-#import "MovieTableViewCell.h"
 #import "LQScrollView.h"
 #import "AFNetworking.h"
 #import "MJExtension.h"
@@ -15,23 +14,25 @@
 #import "UIImageView+WebCache.h"
 #import "MovieModel.h"
 
+#import "ReleaseModel.h"
+#import "ComingModel.h"
 
 @interface MovieViewController ()<UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
 {
+    MovieModel * movieM;
+    ReleaseModel * ReleaseM;
+    ComingModel * ComingM;
     
-    MovieModel *movieM;
 }
 @property(nonatomic,strong)UIImageView *backgroundimg;
 @property(nonatomic,strong)UITableView * tableV;
 @property(nonatomic,strong)UIButton * DWImgBtn;
 @property(nonatomic,strong)UIButton * DWBtn;
 @property(nonatomic,strong)UIScrollView *scrollV;
-@property(nonatomic,strong)UICollectionView *collectionView;
+@property(nonatomic,strong)UICollectionView *collectionViewone;
 @property(nonatomic,strong)UICollectionView *collectionViewtwo;
 @property(nonatomic,strong)UICollectionView *collectionViewthree;
-//@property(nonatomic,strong)NSMutableArray *dataSourceArr;
-@property(nonatomic,strong)NSDictionary *dic;
 
 @end
 
@@ -86,9 +87,7 @@
         _tableV.dataSource=self;
         
     }
-    
     return _tableV;
-    
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -98,13 +97,14 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    MovieTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"cell"];
-    cell=[[MovieTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+    UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"cell"];
+    cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     cell.backgroundColor=[UIColor clearColor];
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     if (indexPath.row == 0) {
         
         [cell addSubview:self.backgroundimg];
+        
     }else if(indexPath.row == 1){
         
         UILabel *label=[[UILabel alloc]initWithFrame:CGRectMake(20, 0, 200, 40)];
@@ -118,49 +118,43 @@
         
         UIImageView *rightimg=[[UIImageView alloc]initWithFrame:CGRectMake(self.view.frame.size.width-50, 20, 15, 20)];
         rightimg.image=[UIImage imageNamed:@"rightimg"];
-        
         [cell addSubview:label];
         [cell addSubview:img];
         [cell addSubview:rightimg];
         
     }else if(indexPath.row == 2){
-        //http://172.17.8.100/movieApi/movie/v1/findHotMovieList
+        
         AFHTTPSessionManager *manager=[AFHTTPSessionManager manager];
         manager.responseSerializer = [AFHTTPResponseSerializer serializer];
         [manager GET:@"http://172.17.8.100/movieApi/movie/v1/findHotMovieList" parameters:@{@"userId":@(18),@"sessionId":@"15320748258726",@"page":@(1),@"count":@(10)} progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            
+            NSLog(@"++++++++++++++++++++%@",responseObject);
             NSDictionary * json = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
             
             self->movieM = [MovieModel mj_objectWithKeyValues:json];
             
-            [self.collectionView reloadData];
+            [self.collectionViewone reloadData];
             
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            
             NSLog(@"电影界面滚动视图获取网络图片错误：%@",error);
             
         }];
         
-        
         //创建流水布局
         UICollectionViewFlowLayout *layout=[[UICollectionViewFlowLayout alloc]init];
-        
-        layout.itemSize=CGSizeMake(120, 180);
+        layout.itemSize=CGSizeMake(130, 180);
         // 横向滚动
         layout.scrollDirection= UICollectionViewScrollDirectionHorizontal;
         // cell间的间距
         //设置最小行间距
-        layout.minimumLineSpacing=20;
+        layout.minimumLineSpacing=30;
         
-        _collectionView =[[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 190) collectionViewLayout:layout];
-        _collectionView.dataSource=self;
-        _collectionView.delegate=self;
-        _collectionView.backgroundColor=[UIColor greenColor];
-        _collectionView.showsHorizontalScrollIndicator=NO;
-        [_collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
-        
-        [cell addSubview:self.collectionView];
-        
+        _collectionViewone =[[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 190) collectionViewLayout:layout];
+        _collectionViewone.dataSource=self;
+        _collectionViewone.delegate=self;
+        _collectionViewone.backgroundColor=[UIColor whiteColor];
+        _collectionViewone.showsHorizontalScrollIndicator=NO;
+        [_collectionViewone registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
+        [cell addSubview:self.collectionViewone];
         
     }else if(indexPath.row == 3){
         
@@ -181,24 +175,41 @@
         [cell addSubview:rightimg];
         
     }else if(indexPath.row == 4){
+        
+        AFHTTPSessionManager *manager=[AFHTTPSessionManager manager];
+        manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+        [manager GET:@"http://172.17.8.100/movieApi/movie/v1/findReleaseMovieList" parameters:@{@"userId":@(18),@"sessionId":@"15320748258726",@"page":@(1),@"count":@(10)} progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            
+            NSLog(@"____________________%@",responseObject);
+            
+            NSDictionary * json = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+            
+            self->ReleaseM = [ReleaseModel mj_objectWithKeyValues:json];
+            
+            [self.collectionViewtwo reloadData];
+            
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            NSLog(@"电影界面滚动视图获取网络图片错误：%@",error);
+            
+        }];
+        
         //创建流水布局
         UICollectionViewFlowLayout *layouttwo=[[UICollectionViewFlowLayout alloc]init];
-        
-        layouttwo.itemSize=CGSizeMake(120, 180);
+        layouttwo.itemSize=CGSizeMake(130, 180);
         // 横向滚动
         layouttwo.scrollDirection= UICollectionViewScrollDirectionHorizontal;
         // cell间的间距
         //设置最小行间距
-        layouttwo.minimumLineSpacing=20;
+        layouttwo.minimumLineSpacing=30;
         
         _collectionViewtwo =[[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 190) collectionViewLayout:layouttwo];
         _collectionViewtwo.dataSource=self;
         _collectionViewtwo.delegate=self;
-        _collectionViewtwo.backgroundColor=[UIColor greenColor];
+        _collectionViewtwo.backgroundColor=[UIColor whiteColor];
         _collectionViewtwo.showsHorizontalScrollIndicator=NO;
-        [_collectionViewtwo registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
-        
+        [_collectionViewtwo registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"celltwo"];
         [cell addSubview:self.collectionViewtwo];
+        
     }else if(indexPath.row == 5){
         
         UILabel *label=[[UILabel alloc]initWithFrame:CGRectMake(20, 0, 200, 40)];
@@ -219,60 +230,108 @@
         
     }else {
         
+        AFHTTPSessionManager *manager=[AFHTTPSessionManager manager];
+        manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+        [manager GET:@"http://172.17.8.100/movieApi/movie/v1/findComingSoonMovieList" parameters:@{@"userId":@(18),@"sessionId":@"15320748258726",@"page":@(1),@"count":@(10)} progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            
+            NSLog(@"====================%@",responseObject);
+            
+            NSDictionary * json = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+            
+            self->ComingM = [ComingModel mj_objectWithKeyValues:json];
+            
+            [self.collectionViewthree reloadData];
+            
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            NSLog(@"电影界面滚动视图获取网络图片错误：%@",error);
+            
+        }];
+        
         //创建流水布局
         UICollectionViewFlowLayout *layoutthree=[[UICollectionViewFlowLayout alloc]init];
-        
-        layoutthree.itemSize=CGSizeMake(120, 180);
+
+        layoutthree.itemSize=CGSizeMake(130, 180);
         // 横向滚动
         layoutthree.scrollDirection= UICollectionViewScrollDirectionHorizontal;
         // cell间的间距
         //设置最小行间距
-        layoutthree.minimumLineSpacing=20;
+        layoutthree.minimumLineSpacing=30;
         
         _collectionViewthree =[[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 190) collectionViewLayout:layoutthree];
         _collectionViewthree.dataSource=self;
         _collectionViewthree.delegate=self;
-        _collectionViewthree.backgroundColor=[UIColor greenColor];
+        _collectionViewthree.backgroundColor=[UIColor whiteColor];
         _collectionViewthree.showsHorizontalScrollIndicator=NO;
         
-        [_collectionViewthree registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
+        [_collectionViewthree registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cellthree"];
         
         [cell addSubview:self.collectionViewthree];
+        
     }
     return cell;
 }
 
--(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
-    
-    return 1;
-}
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     
-    return movieM.result.count;
+    if (collectionView==_collectionViewone) {
+        return movieM.result.count;
+    } else if(collectionView==_collectionViewtwo) {
+        return ReleaseM.result.count;
+    }else {
+        return ComingM.result.count;
+        
+    }
     
 }
-
-
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    UICollectionViewCell *cell=[collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
     
-    cell.backgroundColor=[UIColor yellowColor];
+//    cell.backgroundColor=[UIColor yellowColor];
+    if (collectionView == _collectionViewone) {
+        UICollectionViewCell *cell=[collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+        Res *MovieR=movieM.result[indexPath.row];
+        UIImageView *img=[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 130, 180)];
+        img.layer.masksToBounds=YES;
+        img.layer.cornerRadius=15;
+        [img sd_setImageWithURL:[NSURL URLWithString:MovieR.imageUrl]];
+        [cell addSubview:img];
+        
+        return cell;
+    }else if (collectionView ==_collectionViewtwo){
+        
+        UICollectionViewCell *celltwo=[collectionView dequeueReusableCellWithReuseIdentifier:@"celltwo" forIndexPath:indexPath];
+        
+        ReleaseRes *ReleaseR=ReleaseM.result[indexPath.row];
+        UIImageView *img=[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 130, 180)];
+        img.layer.masksToBounds=YES;
+        img.layer.cornerRadius=15;
+        [img sd_setImageWithURL:[NSURL URLWithString:ReleaseR.imageUrl]];
+        [celltwo addSubview:img];
+        
+        return celltwo;
+    }else{
+        
+        UICollectionViewCell *cellthree=[collectionView dequeueReusableCellWithReuseIdentifier:@"cellthree" forIndexPath:indexPath];
+        
+        Comingre *ComingR=ComingM.result[indexPath.row];
+        UIImageView *img=[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 130, 180)];
+        img.layer.masksToBounds=YES;
+        img.layer.cornerRadius=15;
+        [img sd_setImageWithURL:[NSURL URLWithString:ComingR.imageUrl]];
+        [cellthree addSubview:img];
+        
+        return cellthree;
+    }
     
-    Res *MovieR=movieM.result[indexPath.row];
-    UIImageView *img=[[UIImageView alloc]initWithFrame:CGRectMake(5, 5, 120, 180)];
-    [img sd_setImageWithURL:[NSURL URLWithString:MovieR.imageUrl]];
-    [cell addSubview:img];
-    return cell;
+    
     
 }
 
-#pragma mark  定义整个CollectionViewCell与整个View的间距
 -(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
     
-    return UIEdgeInsetsMake(0, 20, 0, 20 );//（上、左、下、右）
+    return UIEdgeInsetsMake(0, 30, 0, 30 );//（上、左、下、右）
     
 }
 
