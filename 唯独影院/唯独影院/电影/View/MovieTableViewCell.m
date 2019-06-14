@@ -25,8 +25,12 @@
 //-(UIImageView *)image{
 //
 //    if (!_image) {
-//        _image=[UIImageView alloc]initWithFrame:CGRectMake(<#CGFloat x#>, <#CGFloat y#>, <#CGFloat width#>, <#CGFloat height#>)
+//        _image=[[UIImageView alloc]initWithFrame:CGRectMake(5, 5, 5, 5)];
+//        _image.backgroundColor=[UIColor yellowColor];
+//
 //    }
+//
+//    return _image;
 //}
 
 

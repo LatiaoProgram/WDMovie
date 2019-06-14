@@ -10,4 +10,12 @@
 
 @implementation MovieModel
 
++(NSDictionary *)mj_objectClassInArray{
+    return @{@"result":@"Res"};
+}
+
+@end
+
+@implementation Res
+
 @end
