@@ -13,7 +13,6 @@
 #import "MJRefresh.h"
 #import "UIImageView+WebCache.h"
 #import "MovieModel.h"
-
 #import "ReleaseModel.h"
 #import "ComingModel.h"
 
