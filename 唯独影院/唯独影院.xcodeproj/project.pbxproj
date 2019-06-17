@@ -18,6 +18,15 @@
 		5A68285C22AC9AB500CC3D6F /* MovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A68285B22AC9AB500CC3D6F /* MovieViewController.m */; };
 		5A68286222ACDE4200CC3D6F /* MovieModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A68286122ACDE4200CC3D6F /* MovieModel.m */; };
 		5AAEEE0F22B71B260051FE03 /* HotMovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAEEE0E22B71B260051FE03 /* HotMovieViewController.m */; };
+		5AAEEE2122B73A130051FE03 /* MLMSegmentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAEEE1622B73A130051FE03 /* MLMSegmentManager.m */; };
+		5AAEEE2222B73A130051FE03 /* MLMSegmentHead.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAEEE1722B73A130051FE03 /* MLMSegmentHead.m */; };
+		5AAEEE2322B73A130051FE03 /* UIView+ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAEEE1822B73A130051FE03 /* UIView+ViewController.m */; };
+		5AAEEE2422B73A130051FE03 /* MLMSegmentScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAEEE1922B73A130051FE03 /* MLMSegmentScroll.m */; };
+		5AAEEE2522B73A130051FE03 /* UIView+EasyFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAEEE1A22B73A130051FE03 /* UIView+EasyFrame.m */; };
+		5AAEEE2822B73A560051FE03 /* OneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAEEE2722B73A560051FE03 /* OneViewController.m */; };
+		5AAEEE2B22B73A640051FE03 /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAEEE2A22B73A640051FE03 /* TwoViewController.m */; };
+		5AAEEE2E22B73A770051FE03 /* ThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAEEE2D22B73A770051FE03 /* ThreeViewController.m */; };
+		5AAEEE3622B7664E0051FE03 /* voucher_bg_pic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AAEEE3522B7664E0051FE03 /* voucher_bg_pic@2x.png */; };
 		5AFD126E22B3508E0056354B /* ReleaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFD126D22B3508E0056354B /* ReleaseModel.m */; };
 		5AFD127122B350AD0056354B /* ComingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFD127022B350AD0056354B /* ComingModel.m */; };
 		63F307B79803FFD051E261E3 /* libPods-唯独影院.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3652ED37F845449FBD78621A /* libPods-唯独影院.a */; };
@@ -57,6 +66,24 @@
 		5A68286122ACDE4200CC3D6F /* MovieModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieModel.m; sourceTree = "<group>"; };
 		5AAEEE0D22B71B260051FE03 /* HotMovieViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HotMovieViewController.h; sourceTree = "<group>"; };
 		5AAEEE0E22B71B260051FE03 /* HotMovieViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HotMovieViewController.m; sourceTree = "<group>"; };
+		5AAEEE1622B73A130051FE03 /* MLMSegmentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLMSegmentManager.m; sourceTree = "<group>"; };
+		5AAEEE1722B73A130051FE03 /* MLMSegmentHead.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLMSegmentHead.m; sourceTree = "<group>"; };
+		5AAEEE1822B73A130051FE03 /* UIView+ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ViewController.m"; sourceTree = "<group>"; };
+		5AAEEE1922B73A130051FE03 /* MLMSegmentScroll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLMSegmentScroll.m; sourceTree = "<group>"; };
+		5AAEEE1A22B73A130051FE03 /* UIView+EasyFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+EasyFrame.m"; sourceTree = "<group>"; };
+		5AAEEE1B22B73A130051FE03 /* SegmentPageHead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentPageHead.h; sourceTree = "<group>"; };
+		5AAEEE1C22B73A130051FE03 /* MLMSegmentHead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLMSegmentHead.h; sourceTree = "<group>"; };
+		5AAEEE1D22B73A130051FE03 /* UIView+ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ViewController.h"; sourceTree = "<group>"; };
+		5AAEEE1E22B73A130051FE03 /* MLMSegmentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLMSegmentManager.h; sourceTree = "<group>"; };
+		5AAEEE1F22B73A130051FE03 /* UIView+EasyFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+EasyFrame.h"; sourceTree = "<group>"; };
+		5AAEEE2022B73A130051FE03 /* MLMSegmentScroll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLMSegmentScroll.h; sourceTree = "<group>"; };
+		5AAEEE2622B73A560051FE03 /* OneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneViewController.h; sourceTree = "<group>"; };
+		5AAEEE2722B73A560051FE03 /* OneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneViewController.m; sourceTree = "<group>"; };
+		5AAEEE2922B73A640051FE03 /* TwoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwoViewController.h; sourceTree = "<group>"; };
+		5AAEEE2A22B73A640051FE03 /* TwoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwoViewController.m; sourceTree = "<group>"; };
+		5AAEEE2C22B73A770051FE03 /* ThreeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreeViewController.h; sourceTree = "<group>"; };
+		5AAEEE2D22B73A770051FE03 /* ThreeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreeViewController.m; sourceTree = "<group>"; };
+		5AAEEE3522B7664E0051FE03 /* voucher_bg_pic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "voucher_bg_pic@2x.png"; sourceTree = "<group>"; };
 		5AFD126C22B3508E0056354B /* ReleaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReleaseModel.h; sourceTree = "<group>"; };
 		5AFD126D22B3508E0056354B /* ReleaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReleaseModel.m; sourceTree = "<group>"; };
 		5AFD126F22B350AD0056354B /* ComingModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComingModel.h; sourceTree = "<group>"; };
@@ -135,6 +162,7 @@
 				5A68285022A8AB2400CC3D6F /* 电影 */,
 				5A68284F22A8AB2300CC3D6F /* 影院 */,
 				5A68284E22A8AB2100CC3D6F /* 我的 */,
+				5AAEEE1422B739E60051FE03 /* Other */,
 				5A68283822A8AB0D00CC3D6F /* AppDelegate.h */,
 				5A68283922A8AB0D00CC3D6F /* AppDelegate.m */,
 				5A68283B22A8AB0D00CC3D6F /* ViewController.h */,
@@ -185,6 +213,12 @@
 				5A68285B22AC9AB500CC3D6F /* MovieViewController.m */,
 				5AAEEE0D22B71B260051FE03 /* HotMovieViewController.h */,
 				5AAEEE0E22B71B260051FE03 /* HotMovieViewController.m */,
+				5AAEEE2622B73A560051FE03 /* OneViewController.h */,
+				5AAEEE2722B73A560051FE03 /* OneViewController.m */,
+				5AAEEE2922B73A640051FE03 /* TwoViewController.h */,
+				5AAEEE2A22B73A640051FE03 /* TwoViewController.m */,
+				5AAEEE2C22B73A770051FE03 /* ThreeViewController.h */,
+				5AAEEE2D22B73A770051FE03 /* ThreeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -232,6 +266,33 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		5AAEEE1422B739E60051FE03 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				5AAEEE3522B7664E0051FE03 /* voucher_bg_pic@2x.png */,
+				5AAEEE1522B73A130051FE03 /* MLMSegmentPageView */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		5AAEEE1522B73A130051FE03 /* MLMSegmentPageView */ = {
+			isa = PBXGroup;
+			children = (
+				5AAEEE1622B73A130051FE03 /* MLMSegmentManager.m */,
+				5AAEEE1722B73A130051FE03 /* MLMSegmentHead.m */,
+				5AAEEE1822B73A130051FE03 /* UIView+ViewController.m */,
+				5AAEEE1922B73A130051FE03 /* MLMSegmentScroll.m */,
+				5AAEEE1A22B73A130051FE03 /* UIView+EasyFrame.m */,
+				5AAEEE1B22B73A130051FE03 /* SegmentPageHead.h */,
+				5AAEEE1C22B73A130051FE03 /* MLMSegmentHead.h */,
+				5AAEEE1D22B73A130051FE03 /* UIView+ViewController.h */,
+				5AAEEE1E22B73A130051FE03 /* MLMSegmentManager.h */,
+				5AAEEE1F22B73A130051FE03 /* UIView+EasyFrame.h */,
+				5AAEEE2022B73A130051FE03 /* MLMSegmentScroll.h */,
+			);
+			path = MLMSegmentPageView;
 			sourceTree = "<group>";
 		};
 		BD387F79A5DA971A6F8C70E7 /* Frameworks */ = {
@@ -408,6 +469,7 @@
 				5A68284522A8AB0F00CC3D6F /* LaunchScreen.storyboard in Resources */,
 				5A68284222A8AB0F00CC3D6F /* Assets.xcassets in Resources */,
 				5A68284022A8AB0D00CC3D6F /* Main.storyboard in Resources */,
+				5AAEEE3622B7664E0051FE03 /* voucher_bg_pic@2x.png in Resources */,
 				DDD4651922B4812500FFA743 /* CityData.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -468,26 +530,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AAEEE2122B73A130051FE03 /* MLMSegmentManager.m in Sources */,
 				5A68283D22A8AB0D00CC3D6F /* ViewController.m in Sources */,
 				5A68284822A8AB0F00CC3D6F /* main.m in Sources */,
 				5A167B4422AE2F7F00FC062D /* MyViewController.m in Sources */,
 				5AAEEE0F22B71B260051FE03 /* HotMovieViewController.m in Sources */,
 				DDD4651722B4812500FFA743 /* GYZChooseCityController.m in Sources */,
 				DDD464FF22B47E4D00FFA743 /* NearbyVC.m in Sources */,
+				5AAEEE2E22B73A770051FE03 /* ThreeViewController.m in Sources */,
+				5AAEEE2B22B73A640051FE03 /* TwoViewController.m in Sources */,
 				DDD464FD22B47E4D00FFA743 /* RecommendMD.m in Sources */,
 				5AFD127122B350AD0056354B /* ComingModel.m in Sources */,
 				DDD4651B22B4812500FFA743 /* GYZCity.m in Sources */,
 				5A68283A22A8AB0D00CC3D6F /* AppDelegate.m in Sources */,
+				5AAEEE2222B73A130051FE03 /* MLMSegmentHead.m in Sources */,
 				5A68286222ACDE4200CC3D6F /* MovieModel.m in Sources */,
 				DDD4651822B4812500FFA743 /* GYZCityGroupCell.m in Sources */,
 				5AFD126E22B3508E0056354B /* ReleaseModel.m in Sources */,
+				5AAEEE2422B73A130051FE03 /* MLMSegmentScroll.m in Sources */,
 				DDD4650122B47E4D00FFA743 /* CinemaViewController.m in Sources */,
 				DDD4651A22B4812500FFA743 /* GYZCityHeaderView.m in Sources */,
 				5A3941A522AF80290049BD5E /* LQScrollView.m in Sources */,
 				5A68285C22AC9AB500CC3D6F /* MovieViewController.m in Sources */,
 				DDD4651622B4812500FFA743 /* UIView+QQFrame.m in Sources */,
+				5AAEEE2822B73A560051FE03 /* OneViewController.m in Sources */,
 				DDD4651522B4812500FFA743 /* MCPageView.m in Sources */,
+				5AAEEE2322B73A130051FE03 /* UIView+ViewController.m in Sources */,
 				DDD4650022B47E4D00FFA743 /* RecommendCell.m in Sources */,
+				5AAEEE2522B73A130051FE03 /* UIView+EasyFrame.m in Sources */,
 				DDD464FE22B47E4D00FFA743 /* RecommendVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
