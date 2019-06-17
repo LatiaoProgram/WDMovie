@@ -17,6 +17,7 @@
 		5A68284822A8AB0F00CC3D6F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A68284722A8AB0F00CC3D6F /* main.m */; };
 		5A68285C22AC9AB500CC3D6F /* MovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A68285B22AC9AB500CC3D6F /* MovieViewController.m */; };
 		5A68286222ACDE4200CC3D6F /* MovieModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A68286122ACDE4200CC3D6F /* MovieModel.m */; };
+		5AAEEE0F22B71B260051FE03 /* HotMovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAEEE0E22B71B260051FE03 /* HotMovieViewController.m */; };
 		5AFD126E22B3508E0056354B /* ReleaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFD126D22B3508E0056354B /* ReleaseModel.m */; };
 		5AFD127122B350AD0056354B /* ComingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFD127022B350AD0056354B /* ComingModel.m */; };
 		63F307B79803FFD051E261E3 /* libPods-唯独影院.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3652ED37F845449FBD78621A /* libPods-唯独影院.a */; };
@@ -54,6 +55,8 @@
 		5A68285B22AC9AB500CC3D6F /* MovieViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieViewController.m; sourceTree = "<group>"; };
 		5A68286022ACDE4200CC3D6F /* MovieModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieModel.h; sourceTree = "<group>"; };
 		5A68286122ACDE4200CC3D6F /* MovieModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieModel.m; sourceTree = "<group>"; };
+		5AAEEE0D22B71B260051FE03 /* HotMovieViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HotMovieViewController.h; sourceTree = "<group>"; };
+		5AAEEE0E22B71B260051FE03 /* HotMovieViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HotMovieViewController.m; sourceTree = "<group>"; };
 		5AFD126C22B3508E0056354B /* ReleaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReleaseModel.h; sourceTree = "<group>"; };
 		5AFD126D22B3508E0056354B /* ReleaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReleaseModel.m; sourceTree = "<group>"; };
 		5AFD126F22B350AD0056354B /* ComingModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComingModel.h; sourceTree = "<group>"; };
@@ -180,6 +183,8 @@
 			children = (
 				5A68285A22AC9AB500CC3D6F /* MovieViewController.h */,
 				5A68285B22AC9AB500CC3D6F /* MovieViewController.m */,
+				5AAEEE0D22B71B260051FE03 /* HotMovieViewController.h */,
+				5AAEEE0E22B71B260051FE03 /* HotMovieViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -466,6 +471,7 @@
 				5A68283D22A8AB0D00CC3D6F /* ViewController.m in Sources */,
 				5A68284822A8AB0F00CC3D6F /* main.m in Sources */,
 				5A167B4422AE2F7F00FC062D /* MyViewController.m in Sources */,
+				5AAEEE0F22B71B260051FE03 /* HotMovieViewController.m in Sources */,
 				DDD4651722B4812500FFA743 /* GYZChooseCityController.m in Sources */,
 				DDD464FF22B47E4D00FFA743 /* NearbyVC.m in Sources */,
 				DDD464FD22B47E4D00FFA743 /* RecommendMD.m in Sources */,

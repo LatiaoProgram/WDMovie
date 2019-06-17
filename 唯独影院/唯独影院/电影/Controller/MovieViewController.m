@@ -15,6 +15,8 @@
 #import "MovieModel.h"
 #import "ReleaseModel.h"
 #import "ComingModel.h"
+#import "HotMovieViewController.h"
+
 
 @interface MovieViewController ()<UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
@@ -327,6 +329,28 @@
     
     
 }
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if (indexPath.row == 1) {
+        HotMovieViewController *HotMovieVC=[[HotMovieViewController alloc]init];
+        [self presentViewController:HotMovieVC animated:YES completion:nil];
+        
+    }else if(indexPath.row == 3){
+        
+        HotMovieViewController *HotMovieVC=[[HotMovieViewController alloc]init];
+        [self presentViewController:HotMovieVC animated:YES completion:nil];
+        
+    }else if(indexPath.row == 5){
+        
+        HotMovieViewController *HotMovieVC=[[HotMovieViewController alloc]init];
+        [self presentViewController:HotMovieVC animated:YES completion:nil];
+        
+    }
+    
+}
+
+
 
 -(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
     
