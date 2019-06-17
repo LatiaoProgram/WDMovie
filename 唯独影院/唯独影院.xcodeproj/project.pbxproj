@@ -27,6 +27,9 @@
 		5AAEEE2B22B73A640051FE03 /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAEEE2A22B73A640051FE03 /* TwoViewController.m */; };
 		5AAEEE2E22B73A770051FE03 /* ThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAEEE2D22B73A770051FE03 /* ThreeViewController.m */; };
 		5AAEEE3622B7664E0051FE03 /* voucher_bg_pic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AAEEE3522B7664E0051FE03 /* voucher_bg_pic@2x.png */; };
+		5AAEEE3922B76AC80051FE03 /* OneTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAEEE3822B76AC80051FE03 /* OneTableViewCell.m */; };
+		5AAEEE3C22B77A9C0051FE03 /* TwoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAEEE3B22B77A9C0051FE03 /* TwoTableViewCell.m */; };
+		5AAEEE3F22B77CF80051FE03 /* ThreeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAEEE3E22B77CF80051FE03 /* ThreeTableViewCell.m */; };
 		5AFD126E22B3508E0056354B /* ReleaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFD126D22B3508E0056354B /* ReleaseModel.m */; };
 		5AFD127122B350AD0056354B /* ComingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFD127022B350AD0056354B /* ComingModel.m */; };
 		63F307B79803FFD051E261E3 /* libPods-唯独影院.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3652ED37F845449FBD78621A /* libPods-唯独影院.a */; };
@@ -84,6 +87,12 @@
 		5AAEEE2C22B73A770051FE03 /* ThreeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreeViewController.h; sourceTree = "<group>"; };
 		5AAEEE2D22B73A770051FE03 /* ThreeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreeViewController.m; sourceTree = "<group>"; };
 		5AAEEE3522B7664E0051FE03 /* voucher_bg_pic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "voucher_bg_pic@2x.png"; sourceTree = "<group>"; };
+		5AAEEE3722B76AC80051FE03 /* OneTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneTableViewCell.h; sourceTree = "<group>"; };
+		5AAEEE3822B76AC80051FE03 /* OneTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneTableViewCell.m; sourceTree = "<group>"; };
+		5AAEEE3A22B77A9C0051FE03 /* TwoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwoTableViewCell.h; sourceTree = "<group>"; };
+		5AAEEE3B22B77A9C0051FE03 /* TwoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwoTableViewCell.m; sourceTree = "<group>"; };
+		5AAEEE3D22B77CF80051FE03 /* ThreeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreeTableViewCell.h; sourceTree = "<group>"; };
+		5AAEEE3E22B77CF80051FE03 /* ThreeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreeTableViewCell.m; sourceTree = "<group>"; };
 		5AFD126C22B3508E0056354B /* ReleaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReleaseModel.h; sourceTree = "<group>"; };
 		5AFD126D22B3508E0056354B /* ReleaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReleaseModel.m; sourceTree = "<group>"; };
 		5AFD126F22B350AD0056354B /* ComingModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComingModel.h; sourceTree = "<group>"; };
@@ -228,6 +237,12 @@
 			children = (
 				5A3941A322AF80290049BD5E /* LQScrollView.h */,
 				5A3941A422AF80290049BD5E /* LQScrollView.m */,
+				5AAEEE3722B76AC80051FE03 /* OneTableViewCell.h */,
+				5AAEEE3822B76AC80051FE03 /* OneTableViewCell.m */,
+				5AAEEE3A22B77A9C0051FE03 /* TwoTableViewCell.h */,
+				5AAEEE3B22B77A9C0051FE03 /* TwoTableViewCell.m */,
+				5AAEEE3D22B77CF80051FE03 /* ThreeTableViewCell.h */,
+				5AAEEE3E22B77CF80051FE03 /* ThreeTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -535,10 +550,12 @@
 				5A68284822A8AB0F00CC3D6F /* main.m in Sources */,
 				5A167B4422AE2F7F00FC062D /* MyViewController.m in Sources */,
 				5AAEEE0F22B71B260051FE03 /* HotMovieViewController.m in Sources */,
+				5AAEEE3C22B77A9C0051FE03 /* TwoTableViewCell.m in Sources */,
 				DDD4651722B4812500FFA743 /* GYZChooseCityController.m in Sources */,
 				DDD464FF22B47E4D00FFA743 /* NearbyVC.m in Sources */,
 				5AAEEE2E22B73A770051FE03 /* ThreeViewController.m in Sources */,
 				5AAEEE2B22B73A640051FE03 /* TwoViewController.m in Sources */,
+				5AAEEE3F22B77CF80051FE03 /* ThreeTableViewCell.m in Sources */,
 				DDD464FD22B47E4D00FFA743 /* RecommendMD.m in Sources */,
 				5AFD127122B350AD0056354B /* ComingModel.m in Sources */,
 				DDD4651B22B4812500FFA743 /* GYZCity.m in Sources */,
@@ -558,6 +575,7 @@
 				5AAEEE2322B73A130051FE03 /* UIView+ViewController.m in Sources */,
 				DDD4650022B47E4D00FFA743 /* RecommendCell.m in Sources */,
 				5AAEEE2522B73A130051FE03 /* UIView+EasyFrame.m in Sources */,
+				5AAEEE3922B76AC80051FE03 /* OneTableViewCell.m in Sources */,
 				DDD464FE22B47E4D00FFA743 /* RecommendVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

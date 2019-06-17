@@ -80,8 +80,6 @@
     [self.view addSubview:self.DWImgBtn];
     [self.view addSubview:self.DWBtn];
     
-    
-    
 }
 
 
