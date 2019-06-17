@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5A167B4122AE2F6200FC062D /* CinemaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A167B4022AE2F6200FC062D /* CinemaViewController.m */; };
 		5A167B4422AE2F7F00FC062D /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A167B4322AE2F7F00FC062D /* MyViewController.m */; };
 		5A3941A522AF80290049BD5E /* LQScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3941A422AF80290049BD5E /* LQScrollView.m */; };
 		5A68283A22A8AB0D00CC3D6F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A68283922A8AB0D00CC3D6F /* AppDelegate.m */; };
@@ -21,12 +20,22 @@
 		5AFD126E22B3508E0056354B /* ReleaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFD126D22B3508E0056354B /* ReleaseModel.m */; };
 		5AFD127122B350AD0056354B /* ComingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFD127022B350AD0056354B /* ComingModel.m */; };
 		63F307B79803FFD051E261E3 /* libPods-唯独影院.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3652ED37F845449FBD78621A /* libPods-唯独影院.a */; };
+		DDD464FD22B47E4D00FFA743 /* RecommendMD.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD464F022B47E4D00FFA743 /* RecommendMD.m */; };
+		DDD464FE22B47E4D00FFA743 /* RecommendVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD464F222B47E4D00FFA743 /* RecommendVC.m */; };
+		DDD464FF22B47E4D00FFA743 /* NearbyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD464F522B47E4D00FFA743 /* NearbyVC.m */; };
+		DDD4650022B47E4D00FFA743 /* RecommendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD464F822B47E4D00FFA743 /* RecommendCell.m */; };
+		DDD4650122B47E4D00FFA743 /* CinemaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD464FA22B47E4D00FFA743 /* CinemaViewController.m */; };
+		DDD4651522B4812500FFA743 /* MCPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD4650822B4812500FFA743 /* MCPageView.m */; };
+		DDD4651622B4812500FFA743 /* UIView+QQFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD4650922B4812500FFA743 /* UIView+QQFrame.m */; };
+		DDD4651722B4812500FFA743 /* GYZChooseCityController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD4650B22B4812500FFA743 /* GYZChooseCityController.m */; };
+		DDD4651822B4812500FFA743 /* GYZCityGroupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD4650C22B4812500FFA743 /* GYZCityGroupCell.m */; };
+		DDD4651922B4812500FFA743 /* CityData.plist in Resources */ = {isa = PBXBuildFile; fileRef = DDD4650D22B4812500FFA743 /* CityData.plist */; };
+		DDD4651A22B4812500FFA743 /* GYZCityHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD4650E22B4812500FFA743 /* GYZCityHeaderView.m */; };
+		DDD4651B22B4812500FFA743 /* GYZCity.m in Sources */ = {isa = PBXBuildFile; fileRef = DDD4650F22B4812500FFA743 /* GYZCity.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3652ED37F845449FBD78621A /* libPods-唯独影院.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-唯独影院.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5A167B3F22AE2F6200FC062D /* CinemaViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CinemaViewController.h; sourceTree = "<group>"; };
-		5A167B4022AE2F6200FC062D /* CinemaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CinemaViewController.m; sourceTree = "<group>"; };
 		5A167B4222AE2F7F00FC062D /* MyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
 		5A167B4322AE2F7F00FC062D /* MyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
 		5A3941A322AF80290049BD5E /* LQScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQScrollView.h; sourceTree = "<group>"; };
@@ -50,6 +59,31 @@
 		5AFD126F22B350AD0056354B /* ComingModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComingModel.h; sourceTree = "<group>"; };
 		5AFD127022B350AD0056354B /* ComingModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComingModel.m; sourceTree = "<group>"; };
 		9E267295BF769BFA7BCF79CF /* Pods-唯独影院.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-唯独影院.debug.xcconfig"; path = "Pods/Target Support Files/Pods-唯独影院/Pods-唯独影院.debug.xcconfig"; sourceTree = "<group>"; };
+		DDD464EF22B47E4D00FFA743 /* RecommendMD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendMD.h; sourceTree = "<group>"; };
+		DDD464F022B47E4D00FFA743 /* RecommendMD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendMD.m; sourceTree = "<group>"; };
+		DDD464F222B47E4D00FFA743 /* RecommendVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendVC.m; sourceTree = "<group>"; };
+		DDD464F322B47E4D00FFA743 /* NearbyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearbyVC.h; sourceTree = "<group>"; };
+		DDD464F422B47E4D00FFA743 /* RecommendVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendVC.h; sourceTree = "<group>"; };
+		DDD464F522B47E4D00FFA743 /* NearbyVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearbyVC.m; sourceTree = "<group>"; };
+		DDD464F722B47E4D00FFA743 /* RecommendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendCell.h; sourceTree = "<group>"; };
+		DDD464F822B47E4D00FFA743 /* RecommendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendCell.m; sourceTree = "<group>"; };
+		DDD464FA22B47E4D00FFA743 /* CinemaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CinemaViewController.m; sourceTree = "<group>"; };
+		DDD464FB22B47E4D00FFA743 /* CinemaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinemaViewController.h; sourceTree = "<group>"; };
+		DDD4650322B4812500FFA743 /* screenLayOut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = screenLayOut.h; sourceTree = "<group>"; };
+		DDD4650622B4812500FFA743 /* UIView+QQFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+QQFrame.h"; sourceTree = "<group>"; };
+		DDD4650722B4812500FFA743 /* MCPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCPageView.h; sourceTree = "<group>"; };
+		DDD4650822B4812500FFA743 /* MCPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCPageView.m; sourceTree = "<group>"; };
+		DDD4650922B4812500FFA743 /* UIView+QQFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+QQFrame.m"; sourceTree = "<group>"; };
+		DDD4650B22B4812500FFA743 /* GYZChooseCityController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYZChooseCityController.m; sourceTree = "<group>"; };
+		DDD4650C22B4812500FFA743 /* GYZCityGroupCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYZCityGroupCell.m; sourceTree = "<group>"; };
+		DDD4650D22B4812500FFA743 /* CityData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CityData.plist; sourceTree = "<group>"; };
+		DDD4650E22B4812500FFA743 /* GYZCityHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYZCityHeaderView.m; sourceTree = "<group>"; };
+		DDD4650F22B4812500FFA743 /* GYZCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYZCity.m; sourceTree = "<group>"; };
+		DDD4651022B4812500FFA743 /* GYZCityGroupCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYZCityGroupCell.h; sourceTree = "<group>"; };
+		DDD4651122B4812500FFA743 /* GYZChooseCityDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYZChooseCityDelegate.h; sourceTree = "<group>"; };
+		DDD4651222B4812500FFA743 /* GYZChooseCityController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYZChooseCityController.h; sourceTree = "<group>"; };
+		DDD4651322B4812500FFA743 /* GYZCityHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYZCityHeaderView.h; sourceTree = "<group>"; };
+		DDD4651422B4812500FFA743 /* GYZCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYZCity.h; sourceTree = "<group>"; };
 		F5747749059D9D3B9E8B3C32 /* Pods-唯独影院.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-唯独影院.release.xcconfig"; path = "Pods/Target Support Files/Pods-唯独影院/Pods-唯独影院.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,9 +158,9 @@
 		5A68284F22A8AB2300CC3D6F /* 影院 */ = {
 			isa = PBXGroup;
 			children = (
-				5A68285622AC912B00CC3D6F /* Model */,
-				5A68285522AC912A00CC3D6F /* View */,
-				5A68285422AC912600CC3D6F /* Controller */,
+				DDD464FC22B47E4D00FFA743 /* 附近影院 */,
+				DDD464ED22B47E4D00FFA743 /* 推荐影院 */,
+				DDD464F922B47E4D00FFA743 /* 主界面 */,
 			);
 			path = "影院";
 			sourceTree = "<group>";
@@ -172,29 +206,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		5A68285422AC912600CC3D6F /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				5A167B3F22AE2F6200FC062D /* CinemaViewController.h */,
-				5A167B4022AE2F6200FC062D /* CinemaViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		5A68285522AC912A00CC3D6F /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		5A68285622AC912B00CC3D6F /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		5A68285722AC912E00CC3D6F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +235,110 @@
 				3652ED37F845449FBD78621A /* libPods-唯独影院.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DDD464ED22B47E4D00FFA743 /* 推荐影院 */ = {
+			isa = PBXGroup;
+			children = (
+				DDD4650422B4812500FFA743 /* SDK */,
+				DDD4650222B4812500FFA743 /* 适配文件 */,
+				DDD464EE22B47E4D00FFA743 /* M */,
+				DDD464F122B47E4D00FFA743 /* C */,
+				DDD464F622B47E4D00FFA743 /* V */,
+			);
+			path = "推荐影院";
+			sourceTree = "<group>";
+		};
+		DDD464EE22B47E4D00FFA743 /* M */ = {
+			isa = PBXGroup;
+			children = (
+				DDD464EF22B47E4D00FFA743 /* RecommendMD.h */,
+				DDD464F022B47E4D00FFA743 /* RecommendMD.m */,
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		DDD464F122B47E4D00FFA743 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				DDD464F222B47E4D00FFA743 /* RecommendVC.m */,
+				DDD464F322B47E4D00FFA743 /* NearbyVC.h */,
+				DDD464F422B47E4D00FFA743 /* RecommendVC.h */,
+				DDD464F522B47E4D00FFA743 /* NearbyVC.m */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		DDD464F622B47E4D00FFA743 /* V */ = {
+			isa = PBXGroup;
+			children = (
+				DDD464F722B47E4D00FFA743 /* RecommendCell.h */,
+				DDD464F822B47E4D00FFA743 /* RecommendCell.m */,
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		DDD464F922B47E4D00FFA743 /* 主界面 */ = {
+			isa = PBXGroup;
+			children = (
+				DDD464FA22B47E4D00FFA743 /* CinemaViewController.m */,
+				DDD464FB22B47E4D00FFA743 /* CinemaViewController.h */,
+			);
+			path = "主界面";
+			sourceTree = "<group>";
+		};
+		DDD464FC22B47E4D00FFA743 /* 附近影院 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "附近影院";
+			sourceTree = "<group>";
+		};
+		DDD4650222B4812500FFA743 /* 适配文件 */ = {
+			isa = PBXGroup;
+			children = (
+				DDD4650322B4812500FFA743 /* screenLayOut.h */,
+			);
+			name = "适配文件";
+			path = "唯独影院/影院/推荐影院/适配文件";
+			sourceTree = SOURCE_ROOT;
+		};
+		DDD4650422B4812500FFA743 /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				DDD4650522B4812500FFA743 /* MCPageView */,
+				DDD4650A22B4812500FFA743 /* GYZChooseCity */,
+			);
+			name = SDK;
+			path = "唯独影院/影院/推荐影院/SDK";
+			sourceTree = SOURCE_ROOT;
+		};
+		DDD4650522B4812500FFA743 /* MCPageView */ = {
+			isa = PBXGroup;
+			children = (
+				DDD4650622B4812500FFA743 /* UIView+QQFrame.h */,
+				DDD4650722B4812500FFA743 /* MCPageView.h */,
+				DDD4650822B4812500FFA743 /* MCPageView.m */,
+				DDD4650922B4812500FFA743 /* UIView+QQFrame.m */,
+			);
+			path = MCPageView;
+			sourceTree = "<group>";
+		};
+		DDD4650A22B4812500FFA743 /* GYZChooseCity */ = {
+			isa = PBXGroup;
+			children = (
+				DDD4650B22B4812500FFA743 /* GYZChooseCityController.m */,
+				DDD4650C22B4812500FFA743 /* GYZCityGroupCell.m */,
+				DDD4650D22B4812500FFA743 /* CityData.plist */,
+				DDD4650E22B4812500FFA743 /* GYZCityHeaderView.m */,
+				DDD4650F22B4812500FFA743 /* GYZCity.m */,
+				DDD4651022B4812500FFA743 /* GYZCityGroupCell.h */,
+				DDD4651122B4812500FFA743 /* GYZChooseCityDelegate.h */,
+				DDD4651222B4812500FFA743 /* GYZChooseCityController.h */,
+				DDD4651322B4812500FFA743 /* GYZCityHeaderView.h */,
+				DDD4651422B4812500FFA743 /* GYZCity.h */,
+			);
+			path = GYZChooseCity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,6 +403,7 @@
 				5A68284522A8AB0F00CC3D6F /* LaunchScreen.storyboard in Resources */,
 				5A68284222A8AB0F00CC3D6F /* Assets.xcassets in Resources */,
 				5A68284022A8AB0D00CC3D6F /* Main.storyboard in Resources */,
+				DDD4651922B4812500FFA743 /* CityData.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,13 +466,23 @@
 				5A68283D22A8AB0D00CC3D6F /* ViewController.m in Sources */,
 				5A68284822A8AB0F00CC3D6F /* main.m in Sources */,
 				5A167B4422AE2F7F00FC062D /* MyViewController.m in Sources */,
-				5A167B4122AE2F6200FC062D /* CinemaViewController.m in Sources */,
+				DDD4651722B4812500FFA743 /* GYZChooseCityController.m in Sources */,
+				DDD464FF22B47E4D00FFA743 /* NearbyVC.m in Sources */,
+				DDD464FD22B47E4D00FFA743 /* RecommendMD.m in Sources */,
 				5AFD127122B350AD0056354B /* ComingModel.m in Sources */,
+				DDD4651B22B4812500FFA743 /* GYZCity.m in Sources */,
 				5A68283A22A8AB0D00CC3D6F /* AppDelegate.m in Sources */,
 				5A68286222ACDE4200CC3D6F /* MovieModel.m in Sources */,
+				DDD4651822B4812500FFA743 /* GYZCityGroupCell.m in Sources */,
 				5AFD126E22B3508E0056354B /* ReleaseModel.m in Sources */,
+				DDD4650122B47E4D00FFA743 /* CinemaViewController.m in Sources */,
+				DDD4651A22B4812500FFA743 /* GYZCityHeaderView.m in Sources */,
 				5A3941A522AF80290049BD5E /* LQScrollView.m in Sources */,
 				5A68285C22AC9AB500CC3D6F /* MovieViewController.m in Sources */,
+				DDD4651622B4812500FFA743 /* UIView+QQFrame.m in Sources */,
+				DDD4651522B4812500FFA743 /* MCPageView.m in Sources */,
+				DDD4650022B47E4D00FFA743 /* RecommendCell.m in Sources */,
+				DDD464FE22B47E4D00FFA743 /* RecommendVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
